@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Ramval</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d6efd, #00c6ff);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .card-body a {
+            display: inline-block;
+            text-decoration: none;
+            background: #0d6efd;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .social {
+            background: white;
+            margin-top: 60px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.5rem;
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+        }
+
+        .facebook { background: #3b5998; }
+        .instagram { background: #e1306c; }
+        .whatsapp { background: #25d366; }
+        .youtube { background: #ff0000; }
+
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Viajes Ramval</h1>
+    <p>Tu próxima aventura comienza con nosotros</p>
+</header>
+
+<div class="container">
+    <h2>Destinos Populares</h2>
+
+    <div class="cards">
+        <!-- Destino 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <div class="card-body">
+                <h3>Playa Paraíso</h3>
+                <p>Paquetes todo incluido para disfrutar el mar.</p>
+                <a>Ver más</a>
+            </div>
+        </div>
+
+        <!-- Destino 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <div class="card-body">
+                <h3>Aventura en Montaña</h3>
+                <p>Vive experiencias extremas y naturaleza pura.</p>
+                <a>Ver más</a>
+            </div>
+        </div>
+
+        <!-- Destino 3 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+            <div class="card-body">
+                <h3>Ciudades del Mundo</h3>
+                <p>Conoce las ciudades más icónicas.</p>
+                <a>Ver más</a>
+            </div>
+        </div>
+
+        <!-- Banco 1 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc">
+            <div class="card-body">
+                <h3>Banco Ejemplo MX</h3>
+                <p>
+                    <strong>Cuenta:</strong> 1234567890<br>
+                    <strong>CLABE:</strong> 012345678901234567<br>
+                    <strong>Beneficiario:</strong> Viajes Ramval
+                </p>
+                <a onclick="copiarTexto('012345678901234567')">Copiar CLABE</a>
+            </div>
+        </div>
+
+        <!-- Banco 2 -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5">
+            <div class="card-body">
+                <h3>Banco Internacional</h3>
+                <p>
+                    <strong>Tarjeta:</strong> 4111 1111 1111 1111<br>
+                    <strong>Banco:</strong> Banco Demo<br>
+                    <strong>Beneficiario:</strong> Viajes Ramval
+                </p>
+                <a onclick="copiarTexto('4111111111111111')">Copiar Tarjeta</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="social">
+    <h2>Síguenos</h2>
+    <a class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a class="instagram"><i class="fab fa-instagram"></i></a>
+    <a class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a class="youtube"><i class="fab fa-youtube"></i></a>
+</section>
+
+<footer>
+    © 2026 Viajes Ramval | Todos los derechos reservados
+</footer>
+
+<script>
+    function copiarTexto(texto) {
+        navigator.clipboard.writeText(texto);
+        alert("Copiado: " + texto);
+    }
+</script>
+
+</body>
+</html>
